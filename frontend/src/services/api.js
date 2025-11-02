@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://passwordmanager-reo5.onrender.com', // Your backend URL - Corrected Port
+  baseURL: 'https://passwordmanager-32lx.onrender.com', // Your backend URL - Corrected Port
 });
 
 // Interceptor to add the auth token to every request
