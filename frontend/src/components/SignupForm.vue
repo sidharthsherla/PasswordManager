@@ -29,7 +29,7 @@ const handleSignup = async () => {
     }
     isLoading.value = true;
     try {
-        const res = await api.post('/auth/register', { email: email.value, password: password.value });
+        const res = await api.post('/api/auth/register', { email: email.value, password: password.value });
         emit('set-token', res.data.token);
     } catch (err) {
         error.value = err.response?.data?.msg || 'Signup failed. Please try again.';
