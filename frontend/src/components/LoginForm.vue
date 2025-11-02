@@ -23,7 +23,7 @@ const handleLogin = async () => {
     error.value = '';
     isLoading.value = true;
     try {
-        const res = await api.post('/auth/login', { email: email.value, password: password.value });
+        const res = await api.post('/api/auth/login', { email: email.value, password: password.value });
         emit('set-token', res.data.token);
     } catch (err) {
         error.value = err.response?.data?.msg || 'Login failed.';
